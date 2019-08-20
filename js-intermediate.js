@@ -99,15 +99,14 @@ var middleLetters1 = "hello"
 var middleLetters2 = "llamas"
 // Expected output: “am”
 
-let middleLetter = (str) =>{
-  let i=0
-  let arr = str.split('')
-  for(i=0; i<arr.length / 2; i++){
-  }if(str%2 !== 0){
-    return arr[i-1]
-  }else
-    return arr[i-1] + arr[i]
+let middleLetter = (str) =>{ 
+  if(str.length%2 ==0){
+    return str.slice(str.length/2 -1, str.length/2 +1)
+  }else if (str.length%2 !== 0){
+    return str.charAt(str.length/2)
+  }
 }
+
 console.log(middleLetter(middleLetters2))
 
 // 8. Write a program to get the area of a sphere using object classes. Create three spheres with different radi as test cases. Area of a sphere =  4πr^2 (four pi r squared)
